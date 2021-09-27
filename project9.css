@@ -1,0 +1,311 @@
+/* =================
+    start globar
+   ================= */
+* {
+  margin: 0;
+  color: #fff;
+  /* max-width: 100%; */
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* =================
+    end globar
+   ================= */
+
+/* =================
+    start header
+   ================= */
+body {
+  background-image: url(https://taleek.com/img/bg-layer.svg);
+  background-repeat: no-repeat;
+  height: 800px;
+  background-size: cover;
+  background-position: right;
+  position: relative;
+  background-color:dimgrey;
+  backdrop-filter:blur(1px);
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.par-logo {
+  width: 110px;
+  display: flex;
+  position: relative;
+}
+h3 {
+  position: absolute;
+  right: 0;
+  top: 13px;
+}
+nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 12px;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 0.6;
+
+}
+a:hover {
+  font-size: 21px;
+  opacity: 1;
+}
+.icon-menu {
+  display: none;
+padding-left:5px;
+  width: 50px;
+}
+.check{
+  display:none;
+}
+@media (max-width: 745px) {
+  nav {
+    display:none;
+  }
+  header {
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    top: 3px;
+    right:10px;
+    font-size: 25px;
+  }
+  .menu,button:hover {
+    cursor: pointer;
+  }
+  input:checked+ nav{
+
+      display:flex;
+      flex-direction:column;
+   
+      border-radius:15px 0 15px 15px;
+      box-shadow:0 0 15px rgb(195, 182, 182);
+      background-color: rgb(128, 125, 125, 1);
+      top:43px;
+      right:36px;
+      width:260px;
+      justify-content:center;
+      position:absolute;
+      padding-top:10px;
+      padding-left:25px;
+      padding-right:15px;
+      z-index:1;  
+  }
+  nav::before{
+    content:"";
+    border-width:10px;
+    width:1px;
+    border-style:solid;
+    border-color:transparent transparent  rgb(128, 125, 125, 1) transparent;
+    position:absolute;
+    right:0;
+    top:-20px;
+    
+  }
+
+
+  a{
+    padding:8px;
+    animation:mylink 1s 1;
+    border-bottom:2px solid rgb(226, 220, 220);
+  }
+  a:hover{
+    transform:translateX(10px);
+    transition:.3s all;
+  }
+  @keyframes mylink {
+    0%{
+      transform:translateX(30px)
+    }
+    100%{
+      transform:translateX(0)
+    }
+
+    
+  }
+
+  .contact{
+    border:0;
+  }
+
+}
+
+
+
+/* =================
+    end header
+   ================= */
+
+/* =================
+    start main
+   ================= */
+h1 {
+  width: 300px;
+  font-size: 70px;
+  margin: 30px auto;
+  letter-spacing: 10px;
+  animation:myh1 7s infinite;
+  
+}
+@keyframes myh1{
+  0%{
+    letter-spacing:10px;
+  }
+  50%{
+    letter-spacing:20px;
+    opacity:0.5;
+  }
+  100%{
+    letter-spacing:10px;
+  }
+}
+
+.big-img {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  margin: auto;
+  animation:mytaleek 7s infinite;
+}
+@keyframes mytaleek{
+  0%{
+    transform:translateX(0);
+  }
+  50%{
+    transform:translateX(70px);
+    opacity:0.5;
+  }
+  100%{
+    transform:translateX(0);
+  }
+}
+main {
+  position: relative;
+
+  height: 400px;
+}
+.dow {
+  
+    top:60%;
+  position: absolute;
+  text-align: center;
+  left: 10%;
+}
+.app-store {
+  width: 150px;
+  display: block;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+button {
+  background-color: orange;
+  border: none;
+  padding: 17px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  margin: 10px;
+  animation:mybotton 3s infinite;
+}
+@keyframes mybotton{
+  0%{
+    transform:scale(1);
+    border-radius:10px;
+  }
+  50%{
+    transform:scale(1.1);
+    border-radius:20px;
+    
+  }
+  100%{
+    transform:scale(1);
+    border-radius:10px;
+  }
+}
+@media (max-width: 800px) {
+  .big-img {
+    width: 100%;
+    height:300px;
+    position: absolute;
+    left:0;
+    
+  }
+  .dow {
+    position: absolute;
+    top:100%;
+    left:35%;
+    
+  }
+}
+/* =================
+    end main
+   ================= */
+
+
+   /* =================
+    start wave
+   ================= */
+
+   .wave{
+    height:143px;
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+    background-image:url(wave.png);
+    animation:wave 250s infinite;
+   }
+
+   @keyframes wave{
+    0%{
+       background-position:10000px;
+    }
+    50%{
+      background-position:500px;
+      
+    }
+    100%{
+      background-position:10000px;
+    }
+   }
+   .wave::before{
+     content:"";
+     height:143px;
+     position:absolute;
+     width: 100%;
+     bottom: 0;
+     background-image:url(wave.png);
+     animation:wave-chadow 250s infinite;
+     opacity:.5;
+   }
+   @keyframes wave-chadow{
+    0%{
+       background-position:-9000px;
+    }
+    50%{
+      background-position:-500px;
+      
+    }
+    100%{
+      background-position:-9000px;
+
+    }
+  }
+      /* =================
+    start wave
+   ================= */
